@@ -1,13 +1,9 @@
 ---
+import Base from "../layouts/Base.astro"
 
+let title = "home";
 ---
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+<Base title={title}>
+	<h1>Hi!</h1>
+</Base>
