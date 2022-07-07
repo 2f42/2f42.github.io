@@ -4,13 +4,13 @@
 
 <header>
     <nav>
-        <a href="/"><img src="https://media.discordapp.net/attachments/515718436425433090/994272271604662313/unknown.png" /></a>
+        <a href="/"><h1>2f42</h1></a>
 
         <ul>
             <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
             <li><a href="/articles">Articles</a></li>
             <li><a href="/projects">Projects</a></li>
-            <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
         </ul>
     </nav>
@@ -33,6 +33,7 @@
         transition: top 0.25s;
         z-index: 1;
         box-shadow: 0 0 0.3rem darkgrey;
+        color: #eee;
     }
 
     header:hover {
@@ -40,7 +41,8 @@
     }
 
     nav {
-        max-width: 80rem;
+        display: flex;
+        max-width: 60rem;
         margin: 0 auto;
     }
 
@@ -52,14 +54,19 @@
     ul {
         display: flex;
         float: right;
+        right: 0;
         list-style-type: none;
-        margin: 0;
+        margin: 0 0 0 auto;
         padding: 0;
         overflow: hidden;
         height: 100%;
     }
 
-    li a, li a:visited {
+    h1 {
+        margin: 0 auto;
+    }
+
+    a, a:visited, li a, li a:visited {
         float: left;
         display: block;
         padding: 0.4rem 1.2rem;
@@ -68,6 +75,14 @@
         transition: color 0.25s;
         height: 100%;
         line-height: 2.5rem;
+        color: #eee;
+    }
+
+    a:hover {
+        color: #0abfbc;
+    }
+
+    a:active {
         color: #eee;
     }
 
