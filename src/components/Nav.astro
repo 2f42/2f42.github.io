@@ -2,8 +2,73 @@
 
 ---
 
-<nav>
-    <a href="/"><img src="https://media.discordapp.net/attachments/515718436425433090/994272271604662313/unknown.png" width="48px" height="48px" /></a>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-</nav>
+<header>
+    <nav>
+        <a href="/"><img src="https://media.discordapp.net/attachments/515718436425433090/994272271604662313/unknown.png" /></a>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    header {
+        position: sticky;
+        width: 100%;
+        height: 2.9rem;
+        margin: 0;
+        padding-top: 0.5rem;
+        top: -3.5rem;
+        border-bottom: 0.7rem solid transparent;
+        border-image: linear-gradient(30deg, #fc354c, #0abfbc);
+        border-image-slice: 1;
+        transition: top 0.25s;
+        z-index: 1;
+        box-shadow: 0 0 0.3rem darkgrey;
+    }
+
+    header:hover {
+        top: 0;
+    }
+
+    nav {
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    img {
+        max-height: 2rem;
+        margin: 0.45rem;
+    }
+
+    ul {
+        display: flex;
+        float: right;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    li a {
+        float: left;
+        display: block;
+        padding: 0.4rem 1.2rem;
+        text-align: center;
+        text-decoration: none;
+        transition: color 0.25s;
+        height: 100%;
+        line-height: 2.2rem;
+    }
+
+    li a:hover {
+        color: #fc354c;
+    }
+
+    li a:visited {
+        color: black;
+    }
+</style>
