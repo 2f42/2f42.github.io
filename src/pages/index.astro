@@ -8,3 +8,24 @@ let title = "home";
 	<h1>Hi!</h1>
 	<p>Test paragraph to see if things are scaling right??</p>
 </Base>
+
+<script defer>
+	navHeader.style.boxShadow = "none";
+	const triggerShadow = 3 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+
+	window.addEventListener("scroll", () => {
+		if (window.scrollY > triggerShadow) {
+			navHeader.style.boxShadow = "0 0 0.3rem black";
+		} else {
+			navHeader.style.boxShadow = "none";
+		}
+	});
+</script>
+
+<style>
+	body {
+		background-image: linear-gradient(90deg, #093028, #237A57);
+		min-height: 100%;
+		background-attachment: fixed;
+	}
+</style>
