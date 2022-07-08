@@ -1,5 +1,5 @@
 ---
-import "../styles/nav.css"
+
 ---
 
 <header id="nav-header">
@@ -39,7 +39,7 @@ import "../styles/nav.css"
         let scrollPos = window.pageYOffset;
         const navHeader = document.getElementById("nav-header");
 
-        document.addEventListener("scroll", () => {
+        window.addEventListener("scroll", () => {
             if (window.innerWidth <= 600) {
                 let curScrollPos = window.pageYOffset;
                 if (!menuOpen) {
@@ -56,3 +56,148 @@ import "../styles/nav.css"
         });
     </script>
 </header>
+
+<style>
+    header {
+        background-image: linear-gradient(90deg, #093028, #237A57);
+        position: sticky;
+        width: 100%;
+        height: 3.9rem;
+        margin: 0;
+        padding-top: 0.5rem;
+        top: -3.5rem;
+        transition: top 0.25s, box-shadow 0.25s;
+        z-index: 2;
+        box-shadow: 0 0 0.3rem darkgrey;
+        color: #eee;
+    }
+
+    header:hover {
+        top: 0;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 60rem;
+        margin: 0 auto;
+    }
+
+    img {
+        max-height: 3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    ul {
+        display: flex;
+        float: right;
+        right: 0;
+        list-style-type: none;
+        margin: 0 0 0 auto;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    h1 {
+        margin: 0 auto;
+    }
+
+    a, a:visited, li a, li a:visited {
+        float: left;
+        display: block;
+        padding: 0.4rem 1.2rem;
+        text-align: center;
+        text-decoration: none;
+        transition: color 0.25s;
+        height: 100%;
+        line-height: 2.5rem;
+        color: #eee;
+    }
+
+    a:hover {
+        color: #0abfbc;
+    }
+
+    a:active {
+        color: #eee;
+    }
+
+    li a:hover {
+        color: #fc354c;
+    }
+
+    li a:active {
+        color: #ac2a60;
+    }
+
+    button {
+        display: none;
+        margin: 0 1rem 0 auto;
+        font-size: 1.6rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 0.1rem;
+        color: #eee;
+    }
+
+    button span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 6px 0;
+        background-color: #eee;
+    }
+
+    button:hover span {
+        background-color: #fc354c;
+    }
+
+    button:active span {
+        background-color: #ac2a60;
+    }
+
+    @media(max-width: 600px) {
+        button {
+            display: block;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            transform-style: preserve-3d;
+        }
+
+        ul {
+            flex-basis: 100%;
+            flex-direction: column;
+            flex-grow: 1;
+            transition: transform 0.3s;
+            transform-origin: top;
+            backdrop-filter: blur(1rem);
+            background-color: #093028aa;
+            width: 100%;
+            height: calc(101vh);
+            margin-top: 0.5rem;
+        }
+
+        li a {
+            width: 100%;
+            text-align: left;
+            padding-left: 1rem;
+        }
+
+        .nav-hidden {
+            transform: translateX(-100%);
+        }
+
+        header:hover {
+            top: -3.5rem;
+        }
+
+        header:active {
+            top: 0;
+        }
+    }
+</style>
