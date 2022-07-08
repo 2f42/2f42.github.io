@@ -40,17 +40,19 @@
         const navHeader = document.getElementById("nav-header");
 
         window.onscroll = () => {
-            let curScrollPos = window.pageYOffset;
-            if (!menuOpen) {
-                if (scrollPos > curScrollPos) {
-                    navHeader.style.top = "0";
+            if (window.innerWidth <= 600) {
+                let curScrollPos = window.pageYOffset;
+                if (!menuOpen) {
+                    if (scrollPos > curScrollPos) {
+                        navHeader.style.top = "0";
+                    } else {
+                        navHeader.style.top = "-3.5rem";
+                    }
                 } else {
-                    navHeader.style.top = "-3.5rem";
+                    navHeader.style.top = "0";
                 }
-            } else {
-                navHeader.style.top = "0";
+                scrollPos = curScrollPos;
             }
-            scrollPos = curScrollPos;
         }
     </script>
 </header>
