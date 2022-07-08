@@ -38,6 +38,9 @@
 
         let scrollPos = window.pageYOffset;
         const navHeader = document.getElementById("nav-header");
+        if (!document.title.includes("home | 2f42")) {
+            navHeader.style.boxShadow = "0 0 0.3rem black";
+        }
 
         window.addEventListener("scroll", () => {
             if (window.innerWidth <= 600) {
@@ -66,9 +69,8 @@
         margin: 0;
         padding-top: 0.5rem;
         top: -3.5rem;
-        transition: top 0.25s, box-shadow 0.25s;
+        transition: top 0.4s, box-shadow 0.4s;
         z-index: 2;
-        box-shadow: 0 0 0.3rem darkgrey;
         color: #eee;
     }
 
@@ -176,7 +178,8 @@
             transition: transform 0.3s;
             transform-origin: top;
             backdrop-filter: blur(1rem);
-            background-color: #093028aa;
+            background-color: #09302888;
+            background-blend-mode: hard-light;
             width: 100%;
             height: calc(101vh);
             margin-top: 0.5rem;
