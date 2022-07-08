@@ -12,24 +12,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/f2d2691a.8ff75a7c.css" /></head>
+<link rel="stylesheet" href="/assets/f2d2691a.3430ae37.css" /></head>
 
 <body>
-    <header id="nav-header" class="astro-3ROMZGNA">
-    <nav class="astro-3ROMZGNA">
-        <a href="/" class="astro-3ROMZGNA"><h1 class="astro-3ROMZGNA">2f42</h1></a>
+    <header id="nav-header" class="astro-5ZX4INFU">
+    <nav class="astro-5ZX4INFU">
+        <a href="/" class="astro-5ZX4INFU"><h1 class="astro-5ZX4INFU">2f42</h1></a>
 
-        <button id="nav-button" class="astro-3ROMZGNA">
-            <span class="astro-3ROMZGNA"></span>
-            <span class="astro-3ROMZGNA"></span>
-            <span class="astro-3ROMZGNA"></span>
+        <button id="nav-button" class="astro-5ZX4INFU">
+            <span class="astro-5ZX4INFU"></span>
+            <span class="astro-5ZX4INFU"></span>
+            <span class="astro-5ZX4INFU"></span>
         </button>
 
-        <ul class="nav-hidden astro-3ROMZGNA" id="nav-list">
-            <li class="astro-3ROMZGNA"><a href="/about" class="astro-3ROMZGNA">About</a></li>
-            <li class="astro-3ROMZGNA"><a href="/articles" class="astro-3ROMZGNA">Articles</a></li>
-            <li class="astro-3ROMZGNA"><a href="/projects" class="astro-3ROMZGNA">Projects</a></li>
-            <li class="astro-3ROMZGNA"><a href="/contact" class="astro-3ROMZGNA">Contact</a></li>
+        <ul class="nav-hidden astro-5ZX4INFU" id="nav-list">
+            <li class="astro-5ZX4INFU"><a href="/about" class="astro-5ZX4INFU">About</a></li>
+            <li class="astro-5ZX4INFU"><a href="/articles" class="astro-5ZX4INFU">Articles</a></li>
+            <li class="astro-5ZX4INFU"><a href="/projects" class="astro-5ZX4INFU">Projects</a></li>
+            <li class="astro-5ZX4INFU"><a href="/contact" class="astro-5ZX4INFU">Contact</a></li>
         </ul>
     </nav>
 
@@ -51,6 +51,9 @@
 
         let scrollPos = window.pageYOffset;
         const navHeader = document.getElementById("nav-header");
+        if (!document.title.includes("home | 2f42")) {
+            navHeader.style.boxShadow = "0 0 0.3rem black";
+        }
 
         window.addEventListener("scroll", () => {
             if (window.innerWidth <= 600) {
