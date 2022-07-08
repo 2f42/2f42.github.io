@@ -11,25 +11,25 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/f2d2691a.efbd7b90.css" /></head>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/f2d2691a.a2af89f4.css" /></head>
 
 <body>
-    <header id="nav-header" class="astro-ARHOUNKG">
-    <nav class="astro-ARHOUNKG">
-        <a href="/" class="astro-ARHOUNKG"><h1 class="astro-ARHOUNKG">2f42</h1></a>
+    <header id="nav-header" class="astro-6AYYSQBE">
+    <nav class="astro-6AYYSQBE">
+        <a href="/" class="astro-6AYYSQBE"><h1 class="astro-6AYYSQBE">2f42</h1></a>
 
-        <button id="nav-button" class="astro-ARHOUNKG">
-            <span class="astro-ARHOUNKG"></span>
-            <span class="astro-ARHOUNKG"></span>
-            <span class="astro-ARHOUNKG"></span>
+        <button id="nav-button" class="astro-6AYYSQBE">
+            <span class="astro-6AYYSQBE"></span>
+            <span class="astro-6AYYSQBE"></span>
+            <span class="astro-6AYYSQBE"></span>
         </button>
 
-        <ul class="nav-hidden astro-ARHOUNKG" id="nav-list">
-            <li class="astro-ARHOUNKG"><a href="/about" class="astro-ARHOUNKG">About</a></li>
-            <li class="astro-ARHOUNKG"><a href="/articles" class="astro-ARHOUNKG">Articles</a></li>
-            <li class="astro-ARHOUNKG"><a href="/projects" class="astro-ARHOUNKG">Projects</a></li>
-            <li class="astro-ARHOUNKG"><a href="/contact" class="astro-ARHOUNKG">Contact</a></li>
+        <ul class="nav-hidden astro-6AYYSQBE" id="nav-list">
+            <li class="astro-6AYYSQBE"><a href="/about" class="astro-6AYYSQBE">About</a></li>
+            <li class="astro-6AYYSQBE"><a href="/articles" class="astro-6AYYSQBE">Articles</a></li>
+            <li class="astro-6AYYSQBE"><a href="/projects" class="astro-6AYYSQBE">Projects</a></li>
+            <li class="astro-6AYYSQBE"><a href="/contact" class="astro-6AYYSQBE">Contact</a></li>
         </ul>
     </nav>
 
@@ -53,17 +53,19 @@
         const navHeader = document.getElementById("nav-header");
 
         window.onscroll = () => {
-            let curScrollPos = window.pageYOffset;
-            if (!menuOpen) {
-                if (scrollPos > curScrollPos) {
-                    navHeader.style.top = "0";
+            if (window.innerWidth <= 600) {
+                let curScrollPos = window.pageYOffset;
+                if (!menuOpen) {
+                    if (scrollPos > curScrollPos) {
+                        navHeader.style.top = "0";
+                    } else {
+                        navHeader.style.top = "-3.5rem";
+                    }
                 } else {
-                    navHeader.style.top = "-3.5rem";
+                    navHeader.style.top = "0";
                 }
-            } else {
-                navHeader.style.top = "0";
+                scrollPos = curScrollPos;
             }
-            scrollPos = curScrollPos;
         }
     </script>
 </header>
