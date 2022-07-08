@@ -2,7 +2,7 @@
 
 ---
 
-<header>
+<header id="nav-header">
     <nav>
         <a href="/"><h1>2f42</h1></a>
 
@@ -28,12 +28,30 @@
         navButton.addEventListener("click", () => {
             if (menuOpen) {
                 navList.classList.add("nav-hidden");
+                
             } else {
                 navList.classList.remove("nav-hidden");
             }
 
             menuOpen = !menuOpen;
         });
+
+        let scrollPos = window.pageYOffset;
+        const navHeader = document.getElementById("nav-header");
+
+        window.onscroll = () => {
+            let curScrollPos = window.pageYOffset;
+            if (!menuOpen) {
+                if (scrollPos > curScrollPos) {
+                    navHeader.style.top = "0";
+                } else {
+                    navHeader.style.top = "-3.5rem";
+                }
+            } else {
+                navHeader.style.top = "0";
+            }
+            scrollPos = curScrollPos;
+        }
     </script>
 </header>
 
@@ -154,6 +172,7 @@
             backdrop-filter: blur(1rem);
             background-color: #093028aa;
             width: 100%;
+            height: calc(101vh);
         }
 
         li a {
@@ -164,6 +183,14 @@
 
         .nav-hidden {
             transform: translateX(-100%);
+        }
+
+        header:hover {
+            top: -3.5rem;
+        }
+
+        header:active {
+            top: 0;
         }
     }
 </style>
