@@ -12,24 +12,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/f2d2691a.1b6e2af1.css" /></head>
+<link rel="stylesheet" href="/assets/f2d2691a.efbd7b90.css" /></head>
 
 <body>
-    <header class="astro-O3QYGUAO">
-    <nav class="astro-O3QYGUAO">
-        <a href="/" class="astro-O3QYGUAO"><h1 class="astro-O3QYGUAO">2f42</h1></a>
+    <header id="nav-header" class="astro-ARHOUNKG">
+    <nav class="astro-ARHOUNKG">
+        <a href="/" class="astro-ARHOUNKG"><h1 class="astro-ARHOUNKG">2f42</h1></a>
 
-        <button id="nav-button" class="astro-O3QYGUAO">
-            <span class="astro-O3QYGUAO"></span>
-            <span class="astro-O3QYGUAO"></span>
-            <span class="astro-O3QYGUAO"></span>
+        <button id="nav-button" class="astro-ARHOUNKG">
+            <span class="astro-ARHOUNKG"></span>
+            <span class="astro-ARHOUNKG"></span>
+            <span class="astro-ARHOUNKG"></span>
         </button>
 
-        <ul class="nav-hidden astro-O3QYGUAO" id="nav-list">
-            <li class="astro-O3QYGUAO"><a href="/about" class="astro-O3QYGUAO">About</a></li>
-            <li class="astro-O3QYGUAO"><a href="/articles" class="astro-O3QYGUAO">Articles</a></li>
-            <li class="astro-O3QYGUAO"><a href="/projects" class="astro-O3QYGUAO">Projects</a></li>
-            <li class="astro-O3QYGUAO"><a href="/contact" class="astro-O3QYGUAO">Contact</a></li>
+        <ul class="nav-hidden astro-ARHOUNKG" id="nav-list">
+            <li class="astro-ARHOUNKG"><a href="/about" class="astro-ARHOUNKG">About</a></li>
+            <li class="astro-ARHOUNKG"><a href="/articles" class="astro-ARHOUNKG">Articles</a></li>
+            <li class="astro-ARHOUNKG"><a href="/projects" class="astro-ARHOUNKG">Projects</a></li>
+            <li class="astro-ARHOUNKG"><a href="/contact" class="astro-ARHOUNKG">Contact</a></li>
         </ul>
     </nav>
 
@@ -41,12 +41,30 @@
         navButton.addEventListener("click", () => {
             if (menuOpen) {
                 navList.classList.add("nav-hidden");
+                
             } else {
                 navList.classList.remove("nav-hidden");
             }
 
             menuOpen = !menuOpen;
         });
+
+        let scrollPos = window.pageYOffset;
+        const navHeader = document.getElementById("nav-header");
+
+        window.onscroll = () => {
+            let curScrollPos = window.pageYOffset;
+            if (!menuOpen) {
+                if (scrollPos > curScrollPos) {
+                    navHeader.style.top = "0";
+                } else {
+                    navHeader.style.top = "-3.5rem";
+                }
+            } else {
+                navHeader.style.top = "0";
+            }
+            scrollPos = curScrollPos;
+        }
     </script>
 </header>
     <h1>Contact!</h1>
