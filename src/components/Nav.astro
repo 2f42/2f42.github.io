@@ -7,7 +7,9 @@
         <a href="/"><h1>2f42</h1></a>
 
         <button id="nav-button">
-            &#9776;
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
 
         <ul class="nav-hidden" id="nav-list">
@@ -117,8 +119,20 @@
         border: none;
         background: none;
         cursor: pointer;
-        padding: 0;
+        padding: 0.1rem;
         color: #eee;
+    }
+
+    button span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 6px 0;
+        background-color: #eee;
+    }
+
+    button:hover span {
+        background-color: #0abfbc;
     }
 
     @media(max-width: 600px) {
@@ -140,6 +154,12 @@
             backdrop-filter: blur(1rem);
             background-color: #093028aa;
             width: 100%;
+        }
+
+        li a {
+            width: 100%;
+            text-align: left;
+            padding-left: 1rem;
         }
 
         .nav-hidden {
