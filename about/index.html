@@ -12,21 +12,40 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/f2d2691a.d7f81521.css" /></head>
+<link rel="stylesheet" href="/assets/f2d2691a.6f558741.css" /></head>
 
 <body>
-    <header class="astro-N3HZWHFN">
-    <nav class="astro-N3HZWHFN">
-        <a href="/" class="astro-N3HZWHFN"><h1 class="astro-N3HZWHFN">2f42</h1></a>
+    <header class="astro-EAS3C2IC">
+    <nav class="astro-EAS3C2IC">
+        <a href="/" class="astro-EAS3C2IC"><h1 class="astro-EAS3C2IC">2f42</h1></a>
 
-        <ul class="astro-N3HZWHFN">
-            <li class="astro-N3HZWHFN"><a href="/" class="astro-N3HZWHFN">Home</a></li>
-            <li class="astro-N3HZWHFN"><a href="/about" class="astro-N3HZWHFN">About</a></li>
-            <li class="astro-N3HZWHFN"><a href="/articles" class="astro-N3HZWHFN">Articles</a></li>
-            <li class="astro-N3HZWHFN"><a href="/projects" class="astro-N3HZWHFN">Projects</a></li>
-            <li class="astro-N3HZWHFN"><a href="/contact" class="astro-N3HZWHFN">Contact</a></li>
+        <button id="nav-button" class="astro-EAS3C2IC">
+            &#9776;
+        </button>
+
+        <ul class="nav-hidden astro-EAS3C2IC" id="nav-list">
+            <li class="astro-EAS3C2IC"><a href="/about" class="astro-EAS3C2IC">About</a></li>
+            <li class="astro-EAS3C2IC"><a href="/articles" class="astro-EAS3C2IC">Articles</a></li>
+            <li class="astro-EAS3C2IC"><a href="/projects" class="astro-EAS3C2IC">Projects</a></li>
+            <li class="astro-EAS3C2IC"><a href="/contact" class="astro-EAS3C2IC">Contact</a></li>
         </ul>
     </nav>
+
+    <script defer>
+        const navList = document.getElementById("nav-list");
+        const navButton = document.getElementById("nav-button");
+        let menuOpen = false;
+
+        navButton.addEventListener("click", () => {
+            if (menuOpen) {
+                navList.classList.add("nav-hidden");
+            } else {
+                navList.classList.remove("nav-hidden");
+            }
+
+            menuOpen = !menuOpen;
+        });
+    </script>
 </header>
     <h1>About!</h1><p>insert information about me</p><p>hi!</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><p>a</p>
 </body></html>
