@@ -39,7 +39,7 @@ import "../styles/nav.css"
         let scrollPos = window.pageYOffset;
         const navHeader = document.getElementById("nav-header");
 
-        window.onscroll = () => {
+        document.addEventListener("scroll", () => {
             if (window.innerWidth <= 600) {
                 let curScrollPos = window.pageYOffset;
                 if (!menuOpen) {
@@ -53,6 +53,6 @@ import "../styles/nav.css"
                 }
                 scrollPos = curScrollPos;
             }
-        }
+        });
     </script>
 </header>
