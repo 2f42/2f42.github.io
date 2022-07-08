@@ -6,32 +6,46 @@
     <nav>
         <a href="/"><h1>2f42</h1></a>
 
-        <ul>
-            <li><a href="/">Home</a></li>
+        <button id="nav-button">
+            &#9776;
+        </button>
+
+        <ul class="nav-hidden" id="nav-list">
             <li><a href="/about">About</a></li>
             <li><a href="/articles">Articles</a></li>
             <li><a href="/projects">Projects</a></li>
             <li><a href="/contact">Contact</a></li>
         </ul>
     </nav>
+
+    <script defer>
+        const navList = document.getElementById("nav-list");
+        const navButton = document.getElementById("nav-button");
+        let menuOpen = false;
+
+        navButton.addEventListener("click", () => {
+            if (menuOpen) {
+                navList.classList.add("nav-hidden");
+            } else {
+                navList.classList.remove("nav-hidden");
+            }
+
+            menuOpen = !menuOpen;
+        });
+    </script>
 </header>
 
 <style>
     header {
-        background-image: linear-gradient(30deg, #fc354c, #0abfbc);
+        background-image: linear-gradient(0deg, #093028, #237A57);
         position: sticky;
         width: 100%;
         height: 3.9rem;
         margin: 0;
         padding-top: 0.5rem;
         top: -3.5rem;
-        /*
-        border-bottom: 1rem solid transparent;
-        border-image: linear-gradient(30deg, #fc354c, #0abfbc);
-        border-image-slice: 1;
-        */
         transition: top 0.25s;
-        z-index: 1;
+        z-index: 2;
         box-shadow: 0 0 0.3rem darkgrey;
         color: #eee;
     }
@@ -42,6 +56,8 @@
 
     nav {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
         max-width: 60rem;
         margin: 0 auto;
     }
@@ -92,5 +108,42 @@
 
     li a:active {
         color: #ac2a60;
+    }
+
+    button {
+        display: none;
+        margin: 0 1rem 0 auto;
+        font-size: 1.6rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 0;
+        color: #eee;
+    }
+
+    @media(max-width: 600px) {
+        button {
+            display: block;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            transform-style: preserve-3d;
+        }
+
+        ul {
+            flex-basis: 100%;
+            flex-direction: column;
+            flex-grow: 1;
+            transition: transform 0.3s;
+            transform-origin: top;
+            backdrop-filter: blur(1rem);
+            background-color: #093028aa;
+            width: 100%;
+        }
+
+        .nav-hidden {
+            transform: translateX(-100%);
+        }
     }
 </style>
