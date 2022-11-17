@@ -1,0 +1,68 @@
+$bg-colour: #191631;
+$main-colour: #CBF0F8;
+$primary-accent: #C0A0F3;//#BFA5E2;
+$secondary-accent: #1FB5DA;
+$tertiary-accent: #F2E1D9;
+
+body {
+    background-color: $bg-colour;
+    color: $main-colour;
+    font-family: "Consolas", monospace;
+    font-size: 18px;
+}
+
+.inverted {
+    color: $bg-colour;
+}
+
+.main-colour {
+    color: $main-colour;
+}
+
+.primary-accent {
+    color: $primary-accent;
+}
+
+.secondary-accent {
+    color: $secondary-accent;
+}
+
+.tertiary-accent {
+    color: $tertiary-accent;
+}
+
+.main-colour-bg {
+    background-color: $main-colour;
+}
+
+.primary-accent-bg {
+    background-color: $primary-accent;
+}
+
+.secondary-accent-bg {
+    background-color: $secondary-accent;
+}
+
+.tertiary-accent-bg {
+    background-color: $tertiary-accent;
+}
+
+a {
+    transition: all 0.5s ease;
+    border-bottom: 1px dotted $secondary-accent;
+    text-decoration: none;
+    color: $secondary-accent;
+}
+
+a:active {
+    color: $main-colour;
+}
+
+a:visited {
+    color: $secondary-accent;
+}
+
+a:hover {
+    border-bottom: 1px dotted $main-colour;
+    color: $main-colour;
+}

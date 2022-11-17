@@ -1,8 +1,26 @@
-<script>
-    import CommitHash from "$lib/components/CommitHash.svelte";
+<script lang="ts">
+	import Neofetch from "$lib/components/Neofetch.svelte";
+    import "$lib/styles/style.scss";
+	import { onMount } from "svelte";
+	import { select_options } from "svelte/internal";
+
+    let date = new Date();
+    $: time = date.toLocaleTimeString();
+    $: timeNum = date.getHours() + date.getMinutes()/60;
+
+    let loadTime = Infinity;
+
+    onMount(() => {
+        setInterval(() => {
+            date = new Date();
+        }, 1000);
+
+        loadTime = (window.performance.timing.loadEventEnd - window.performance.timing.navigationStart)/1000;
+    });
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<p>Good { (4 <= timeNum && timeNum < 12) ? "morning" : (12 <= timeNum && timeNum < 6) ? "afternoon" : "evening" }!</p>
+<p>Welcome to <a href="/">2f42.dev</a>!</p>
+<p>Page { Number.isFinite(loadTime) ? "loaded in " + loadTime + " seconds" : "loading..." }</p>
 
-<CommitHash />
+<Neofetch />

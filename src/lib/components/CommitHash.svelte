@@ -1,5 +1,5 @@
-<script>
-    
+<script lang="ts">
+    // @ts-nocheck
 </script>
 
-<span>Version: {__COMMIT_HASH__}</span>
+<span>{__COMMIT_HASH__}</span>
