@@ -12,7 +12,13 @@ body {
 }
 
 .inverted {
+    background-color: $main-colour;
     color: $bg-colour;
+}
+
+.not-inverted {
+    color: $main-colour;
+    background-color: $bg-colour;
 }
 
 .main-colour {

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Neofetch from "$lib/components/Neofetch.svelte";
+	import TopBar from "$lib/components/TopBar.svelte";
     import "$lib/styles/style.scss";
 	import { onMount } from "svelte";
 	import { select_options } from "svelte/internal";
@@ -19,8 +20,19 @@
     });
 </script>
 
-<p>Good { (4 <= timeNum && timeNum < 12) ? "morning" : (12 <= timeNum && timeNum < 18) ? "afternoon" : "evening" }!</p>
-<p>Welcome to <a href="/">2f42.dev</a>!</p>
-<p>Page { Number.isFinite(loadTime) ? "loaded in " + loadTime + " seconds" : "loading..." }</p>
+<TopBar />
 
-<Neofetch />
+<div>
+    <p>Good { (4 <= timeNum && timeNum < 12) ? "morning" : (12 <= timeNum && timeNum < 18) ? "afternoon" : "evening" }!</p>
+    <p>Welcome to <a href="/">2f42.dev</a>!</p>
+    <p>Page { Number.isFinite(loadTime) ? "loaded in " + loadTime + " seconds" : "loading..." }</p>
+
+    <Neofetch />
+</div>
+
+<style>
+    div {
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+</style>
