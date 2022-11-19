@@ -27,15 +27,29 @@
     div {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
     }
     
     ul {
         list-style: none;
         margin-top: 0;
-        padding-left: 1rem;
+        padding-left: 1.5rem;
+        min-width: 18rem;
     }
 
     img {
         max-width: 18rem;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    @media (max-width: 30rem) {
+        img {
+            margin: auto auto 1rem auto;
+        }
+
+        ul {
+            padding-left: 0;
+        }
     }
 </style>

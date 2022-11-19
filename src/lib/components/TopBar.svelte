@@ -9,13 +9,13 @@
     onMount(() => {
         setInterval(() => {
             date = new Date();
-        }, 700);
+        }, 500);
     });
 
 </script>
 
 <div class="topbar inverted">
-    &#9495; 24f2.dev{$page.url.pathname}
+    -&gt; 24f2.dev{$page.url.pathname}
 
     <div class="time not-inverted">
         {datetime}
@@ -26,11 +26,21 @@
     .topbar {
         margin: 0.5rem;
         padding: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .time {
         margin: -0.2rem;
+        margin-left: auto;
         padding: 0.2rem 0.7rem;
         float: right;
+    }
+
+    @media (max-width: 35rem) {
+        .time {
+            margin: 0.5rem auto -0.2rem auto;
+        }
     }
 </style>
