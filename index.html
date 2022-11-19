@@ -1,99 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/_page-bf0d0de9.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-07ecb4f7.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-a7c5e7e5.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-0e853798.js">
+		<link rel="modulepreload" href="./_app/immutable/components/layout.svelte-27d98d6c.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-1daba58d.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-c2fc44b2.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores-64ce3102.js">
+	</head>
+	<body>
+		<div>
 
-<head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-<title>home | 2f42</title>
-<meta name="title" content="home | 2f42">
+<div class="topbar inverted svelte-1xwqpc8">-&gt; 24f2.dev/
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/f2d2691a.ff7304e5.css" />
-<link rel="stylesheet" href="/assets/5caa3970.bb560bc4.css" /></head>
+    <div class="time not-inverted svelte-1xwqpc8">Sat, 19 Nov 2022 -> 02:17:12</div>
+</div>
 
-<body>
-    <header id="nav-header" class="astro-AKHCZN3M">
-    <nav class="astro-AKHCZN3M">
-        <a href="/" class="astro-AKHCZN3M"><h1 class="astro-AKHCZN3M">2f42</h1></a>
+<div class="svelte-19scki7"><p>Good evening!</p>
+    <p>Welcome to <a href="/">2f42.dev</a>!</p>
+    <p>Page loading...</p>
 
-        <button id="nav-button" class="astro-AKHCZN3M">
-            <span class="astro-AKHCZN3M"></span>
-            <span class="astro-AKHCZN3M"></span>
-            <span class="astro-AKHCZN3M"></span>
-        </button>
+    <p><span class="secondary-accent">nathan</span> ~&gt; <span class="tertiary-accent">neofetch</span></p>
 
-        <ul class="nav-hidden astro-AKHCZN3M" id="nav-list">
-            <li class="astro-AKHCZN3M"><a href="/about" class="astro-AKHCZN3M">About</a></li>
-            <li class="astro-AKHCZN3M"><a href="/articles" class="astro-AKHCZN3M">Articles</a></li>
-            <li class="astro-AKHCZN3M"><a href="/projects" class="astro-AKHCZN3M">Projects</a></li>
-            <li class="astro-AKHCZN3M"><a href="/contact" class="astro-AKHCZN3M">Contact</a></li>
-        </ul>
-    </nav>
+<div class="svelte-ysorsi"><img src="./images/me.jpg" alt="me, lifting my thumbs to indicate joy" class="svelte-ysorsi">
 
-    <script defer>
-        const navList = document.getElementById("nav-list");
-        const navButton = document.getElementById("nav-button");
-        let menuOpen = false;
+    <ul class="svelte-ysorsi"><li><span class="primary-accent">nathan</span>@<span class="primary-accent">2f42</span></li>
+        <li>-----------</li>
+        <li><span class="primary-accent">Name:</span> Nathan Patel</li>
+        <li><span class="primary-accent">Currently:</span> Computer Science Undergrad @ University of Bristol</li>
+        <li><span class="primary-accent">Site Last Updated:</span> 2022-11-19
+ (<a href="https://github.com/2f42/2f42.github.io">0784470</a>)</li>
+        <li><span class="primary-accent">Favourite Game:</span> Dota 2</li>
+        <li><span class="primary-accent">Favourite Vegetable:</span> Onion</li>
+        <li><span class="primary-accent">Github:</span> <a href="https://github.com/2f42/">@2f42</a></li>
+        <li><span class="primary-accent">LinkedIn:</span> <a href="https://www.linkedin.com/in/nathan-patel-24b817207/">My Profile</a></li>
+        <li> </li>
+        <li>   <span class="primary-accent-bg">   </span><span class="tertiary-accent-bg">   </span><span class="secondary-accent-bg">   </span><span class="main-colour-bg">   </span></li></ul>
+</div>
+</div>
 
-        navButton.addEventListener("click", () => {
-            if (menuOpen) {
-                navList.classList.add("nav-hidden");
-                
-            } else {
-                navList.classList.remove("nav-hidden");
-            }
 
-            menuOpen = !menuOpen;
-        });
+		<script type="module" data-sveltekit-hydrate="xne91n">
+			import { start } from "./_app/immutable/start-07ecb4f7.js";
 
-        let scrollPos = window.pageYOffset;
-        const navHeader = document.getElementById("nav-header");
-        if (!document.title.includes("home | 2f42")) {
-            navHeader.style.boxShadow = "0 0 0.3rem #444";
-        }
-
-        window.addEventListener("scroll", () => {
-            if (window.innerWidth <= 600) {
-                let curScrollPos = window.pageYOffset;
-                if (!menuOpen) {
-                    if (scrollPos > curScrollPos) {
-                        navHeader.style.top = "0";
-                    } else {
-                        navHeader.style.top = "-3.5rem";
-                    }
-                } else {
-                    navHeader.style.top = "0";
-                }
-                scrollPos = curScrollPos;
-            }
-        });
-    </script>
-</header>
-    <div class="welcome astro-O5TVZF63">
-		<h1 class="astro-O5TVZF63">welcome to my&nbsp;realm</h1>
-		<p class="astro-O5TVZF63">I'm Nathan&nbsp;Patel, a <s class="astro-O5TVZF63">skilled&nbsp;gremlin</s> Computer&nbsp;Science&nbsp;undergrad</p>
-	</div><div class="buttons astro-O5TVZF63">
-		<a href="/about" class="astro-O5TVZF63">
-			<h2 class="astro-O5TVZF63">learn about me &#126;&gt;</h2>
-		</a>
-		<a href="/contact" class="astro-O5TVZF63">
-			<h2 class="astro-O5TVZF63">get in touch &#126;&gt;</h2>
-		</a>
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 2],
+					params: {},
+					routeId: "/",
+					data: (function(a){return [a,a]}(null)),
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="xne91n"]').parentNode,
+				trailing_slash: "never"
+			});
+		</script>
 	</div>
-</body></html>
-
-<script defer>
-	const triggerShadow = 3 * parseFloat(getComputedStyle(document.documentElement).fontSize);
-
-	window.addEventListener("scroll", () => {
-		if (window.scrollY > triggerShadow) {
-			navHeader.style.boxShadow = "0 0 0.3rem black";
-		} else {
-			navHeader.style.boxShadow = "none";
-		}
-	});
-</script>
+	</body>
+</html>
