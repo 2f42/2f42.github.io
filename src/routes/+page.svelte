@@ -25,7 +25,7 @@
 <div>
     <p>Good { (4 <= timeNum && timeNum < 12) ? "morning" : (12 <= timeNum && timeNum < 18) ? "afternoon" : "evening" }!</p>
     <p>Welcome to <a href="/">2f42.dev</a>!</p>
-    <p>Page { Number.isFinite(loadTime) ? "loaded in " + loadTime + " seconds" : "loading..." }</p>
+    <p>Page { Number.isFinite(loadTime) ? (loadTime < 0 ? "loaded instantly!" : "loaded in " + loadTime + " seconds") : "loading..." }</p>
 
     <Neofetch />
 </div>
