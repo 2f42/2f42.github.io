@@ -13,7 +13,7 @@
         <li>-----------</li>
         <li><span class="primary-accent">Name:</span> Nathan Patel</li>
         <li><span class="primary-accent">Currently:</span> Computer Science Undergrad @ University of Bristol</li>
-        <li><span class="primary-accent">Site Last Updated:</span> {__COMMIT_DATE__} (<a href="https://github.com/2f42/2f42.github.io">{__COMMIT_HASH__.trim()}</a>)</li>
+        <li><span class="primary-accent">Site Last Updated:</span> {__COMMIT_DATE__} (<a href="https://github.com/2f42/2f42.github.io/commits/main">{__COMMIT_HASH__.trim()}</a>)</li>
         <li><span class="primary-accent">Favourite Game:</span> Dota 2</li>
         <li><span class="primary-accent">Favourite Vegetable:</span> Onion</li>
         <li><span class="primary-accent">Github:</span> <a href="https://github.com/2f42/">@2f42</a></li>
