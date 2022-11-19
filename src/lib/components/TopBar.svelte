@@ -1,10 +1,14 @@
 <script lang="ts">
     import { page } from '$app/stores';
 	import { onMount } from 'svelte';
+    import "$lib/styles/style.scss";
     
     let date = new Date();
     $: datetime = date.toLocaleString("en-GB", { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })
         + " -> " + date.toLocaleTimeString("en-GB");
+
+    const path = $page.url.pathname.slice(1).split("/");
+    const breadcrumbs = path.reduce((paths, val) => [...paths, paths.at(-1) + "/" + val], [""]).slice(1).map((e, i) => { return {url: e, name: path[i]} });
 
     onMount(() => {
         setInterval(() => {
@@ -15,14 +19,24 @@
 </script>
 
 <div class="topbar inverted">
-    -&gt; 24f2.dev{$page.url.pathname}
+    &rarr;&nbsp;<a href="/">24f2.dev</a>{#each breadcrumbs as crumb}/<a href={crumb.url}>{crumb.name}</a>{/each}
 
     <div class="time not-inverted">
         {datetime}
     </div>
 </div>
 
-<style>
+<style lang="scss">
+    @import "../styles/colours.scss";
+
+    a {
+        color: $bg-colour;
+    }
+    
+    a:hover {
+        color: $bg-colour;
+    }
+
     .topbar {
         margin: 0.5rem;
         padding: 0.5rem;
