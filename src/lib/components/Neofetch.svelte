@@ -7,8 +7,8 @@
 
 <div>
     <img
-        srcset="./images/me-400.jpg 400w, ./images/me-200.jpg 200w"
-        sizes="(max-width: 800px) 200px, 400px"
+        srcset="./images/me-288.jpg 288w, ./images/me-200.jpg 200w"
+        sizes="(max-width: 800px) 200px, 288px"
         src="./images/me.jpg"
         alt="me, lifting my thumbs to indicate joy" />
 
