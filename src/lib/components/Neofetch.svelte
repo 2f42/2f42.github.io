@@ -6,7 +6,11 @@
 <p><span class="secondary-accent">nathan</span> ~> <span class="tertiary-accent">neofetch</span></p>
 
 <div>
-    <img src="./images/me.jpg" alt="me, lifting my thumbs to indicate joy" />
+    <img
+        srcset="./images/me-400.jpg 400w, ./images/me-200.jpg 200w"
+        sizes="(max-width: 800px) 200px, 400px"
+        src="./images/me.jpg"
+        alt="me, lifting my thumbs to indicate joy" />
 
     <ul>
         <li><span class="primary-accent">nathan</span>@<span class="primary-accent">2f42</span></li>
