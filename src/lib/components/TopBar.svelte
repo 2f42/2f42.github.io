@@ -19,7 +19,7 @@
 </script>
 
 <div class="topbar inverted">
-    &rarr;&nbsp;<a href="/">24f2.dev</a>{#each breadcrumbs as crumb}/<a href={crumb.url}>{crumb.name}</a>{/each}
+    &rarr;&nbsp;<a href="/">2f42.dev</a>{#each breadcrumbs as crumb}/<a href={crumb.url}>{crumb.name}</a>{/each}
 
     <div class="time not-inverted">
         {datetime}
